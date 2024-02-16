@@ -9,9 +9,9 @@ This mini project focuses on building a server for [Your Project Name]. It inclu
 - ...
 
 **Installation:**
-cd your-project
-npm install
-npm start
+-cd your-project
+-npm install
+-npm start
 
 
 To set up the project locally, follow these steps:
