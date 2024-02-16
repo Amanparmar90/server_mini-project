@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client-Side Code</title>
+</head>
+<body>
+  <h1 id="getUserIdValue"></h1>
+  <h2 id="postUserIdValue"></h2>
+
+  <script>
+    // Read cookies client-side
+    const getUserIdCookie = document.cookie.split('; ').find(row => row.startsWith('getUserId='));
+    const postUserIdCookie = document.cookie.split('; ').find(row => row.startsWith('postUserId='));
+
+    // Extract cookie values
+    const getUserIdValue = getUserIdCookie ? getUserIdCookie.split('=')[1] : 'No value found';
+    const postUserIdValue = postUserIdCookie ? postUserIdCookie.split('=')[1] : 'No value found';
+
+    // Update the content of the h1 and h2 tags
+    document.getElementById('getUserIdValue').textContent = `getUserId: ${getUserIdValue}`;
+    document.getElementById('postUserIdValue').textContent = `postUserId: ${postUserIdValue}`;
+
+    // Log the values to the console
+    console.log(getUserIdValue); // Log the value of 'getUserId' cookie
+    console.log(postUserIdValue); // Log the value of 'postUserId' cookie
+  </script>
+</body>
+</html>
